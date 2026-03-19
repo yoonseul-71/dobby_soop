@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <title>DOHYUN FAN</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+  <button onclick="showPage('home')">홈</button>
+  <button onclick="showPage('calendar')">캘린더</button>
+  <button onclick="showPage('stats')">전적</button>
+  <button onclick="showPage('tools')">도구</button>
+</nav>
+
+<section id="home" class="page">
+  <h1>DOHYUN LIVE</h1>
+
+  <iframe src=""></iframe>
+
+  <div class="buttons">
+    <button onclick="go('방송국링크')">방송국</button>
+    <button onclick="go('유튜브링크')">YouTube</button>
+    <button onclick="go('팬카페링크')">팬카페</button>
+  </div>
+</section>
+
+<section id="calendar" class="page hidden">
+  <h2>캘린더</h2>
+
+  <input type="date" id="date">
+  <input type="text" id="content" placeholder="내용">
+  <input type="text" id="link" placeholder="VOD 링크">
+
+  <button onclick="addSchedule()">추가</button>
+
+  <ul id="scheduleList"></ul>
+</section>
+
+<section id="stats" class="page hidden">
+  <h2>전적</h2>
+
+  <button onclick="openStat('pubg')">배그</button>
+  <button onclick="openStat('valorant')">발로</button>
+  <button onclick="openStat('lol')">롤</button>
+
+  <iframe id="statFrame"></iframe>
+</section>
+
+<section id="tools" class="page hidden">
+  <h2>도구</h2>
+
+  <button onclick="go('시트링크')">시트</button>
+  <button onclick="go('노션링크')">노션</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
