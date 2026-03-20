@@ -3,20 +3,12 @@ function showPage(page) {
   document.getElementById(page).classList.remove('hidden');
 }
 
-function go(url) {
-  window.open(url, "_blank");
-}
-function showGame(game) {
-  document.querySelectorAll('.game').forEach(g => g.classList.add('hidden'));
-  document.getElementById(game).classList.remove('hidden');
-}
-
 function showYear(game, year) {
   document.querySelectorAll(`#${game} .grid`).forEach(g => g.classList.add('hidden'));
   document.getElementById(`${game}-${year}`).classList.remove('hidden');
 }
 
-/* 🔥 직접 입력 데이터 */
+/* 데이터 */
 const data = [
   {
     game: "LOL",
@@ -37,17 +29,17 @@ const data = [
     result: "19:31"
   },
   {
-    game: "LOL",
-    year: "2024",
-    date: "2024-08-15",
-    type: "내전",
-    img: "https://ddragon.leagueoflegends.com/cdn/img/champion/splash/Ashe_0.jpg",
-    kda: "10/2/5",
-    result: "30:20"
+    game: "VAL",
+    year: "2025",
+    date: "2025-01-10",
+    type: "스크림",
+    img: "https://via.placeholder.com/150",
+    kda: "20/5/3",
+    result: "13:10"
   }
 ];
 
-/* 🔥 렌더 */
+/* 렌더 */
 function render() {
   document.querySelectorAll('.grid').forEach(g => g.innerHTML = "");
 
@@ -62,6 +54,7 @@ function render() {
   Object.keys(grouped).forEach(key => {
     const [game, year, date] = key.split("-");
     const container = document.getElementById(`${game}-${year}`);
+    if (!container) return;
 
     const groupDiv = document.createElement("div");
     groupDiv.className = "date-group";
