@@ -11,26 +11,42 @@ function showYear(game, year) {
 }
 
 /* 🔥 여기만 수정하면 전적 추가됨 */
-const data = [
-  {
-    game: "LOL",
-    year: "2024",
-    date: "2024-03-21",
-    type: "내전",
-    img: "https://via.placeholder.com/200",
-    kda: "10/2/5",
-    result: "W"
-  },
-  {
-    game: "PUBG",
-    year: "2025",
-    date: "2025-01-10",
-    type: "스크림",
-    img: "https://via.placeholder.com/200",
-    kda: "5킬",
-    result: "L"
-  }
-];
+const data = {
+  game: "LOL",
+  year: "2024",
+  date: "2024-08-14",
+  type: "랜덤",
+  img: "https://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/Ezreal.png",
+  kda: "3/4/13",
+  result: "25:26"
+},
+{
+  game: "LOL",
+  year: "2024",
+  date: "2024-08-14",
+  type: "랜덤",
+  img: "https://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/Zeri.png",
+  kda: "3/7/4",
+  result: "19:31"
+},
+{
+  game: "LOL",
+  year: "2024",
+  date: "2024-08-14",
+  type: "랜덤",
+  img: "https://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/Ashe.png",
+  kda: "5/7/3",
+  result: "21:33"
+},
+{
+  game: "LOL",
+  year: "2024",
+  date: "2024-08-14",
+  type: "랜덤",
+  img: "https://ddragon.leagueoflegends.com/cdn/13.1.1/img/champion/Zeri.png",
+  kda: "9/6/4",
+  result: "18:30"
+}
 
 // 출력
 function render() {
