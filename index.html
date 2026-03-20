@@ -8,12 +8,13 @@
 <body>
 
 <header>
-  <h1 class="logo">DOHYEON RESULT</h1>
+  <div class="logo">DOHYEON RESULT</div>
 
+  <!-- 🔴 이건 그대로 유지 -->
   <nav>
-    <button onclick="showGame('LOL')">롤</button>
-    <button onclick="showGame('VAL')">발로란트</button>
-    <button onclick="showGame('PUBG')">배틀그라운드</button>
+    <button onclick="showPage('LOL')">롤</button>
+    <button onclick="showPage('VAL')">발로란트</button>
+    <button onclick="showPage('PUBG')">배틀그라운드</button>
   </nav>
 </header>
 
@@ -21,72 +22,45 @@
 <section id="LOL" class="page">
   <h2>롤</h2>
 
-  <div class="year-buttons">
+  <div class="buttons">
     <button onclick="showYear('LOL','2024')">2024</button>
     <button onclick="showYear('LOL','2025')">2025</button>
     <button onclick="showYear('LOL','2026')">2026</button>
   </div>
 
-  <div id="LOL-2024" class="year"></div>
-  <div id="LOL-2025" class="year hidden"></div>
-  <div id="LOL-2026" class="year hidden"></div>
+  <div id="LOL-2024" class="grid"></div>
+  <div id="LOL-2025" class="grid hidden"></div>
+  <div id="LOL-2026" class="grid hidden"></div>
 </section>
 
 <!-- 발로 -->
 <section id="VAL" class="page hidden">
   <h2>발로란트</h2>
 
-  <div class="year-buttons">
+  <div class="buttons">
     <button onclick="showYear('VAL','2024')">2024</button>
     <button onclick="showYear('VAL','2025')">2025</button>
     <button onclick="showYear('VAL','2026')">2026</button>
   </div>
 
-  <div id="VAL-2024" class="year"></div>
-  <div id="VAL-2025" class="year hidden"></div>
-  <div id="VAL-2026" class="year hidden"></div>
+  <div id="VAL-2024" class="grid"></div>
+  <div id="VAL-2025" class="grid hidden"></div>
+  <div id="VAL-2026" class="grid hidden"></div>
 </section>
 
 <!-- 배그 -->
 <section id="PUBG" class="page hidden">
   <h2>배틀그라운드</h2>
 
-  <div class="year-buttons">
+  <div class="buttons">
     <button onclick="showYear('PUBG','2024')">2024</button>
     <button onclick="showYear('PUBG','2025')">2025</button>
     <button onclick="showYear('PUBG','2026')">2026</button>
   </div>
 
-  <div id="PUBG-2024" class="year"></div>
-  <div id="PUBG-2025" class="year hidden"></div>
-  <div id="PUBG-2026" class="year hidden"></div>
-</section>
-
-<!-- 전적 입력 -->
-<section class="page">
-  <h2>전적 입력</h2>
-
-  <div class="buttons">
-    <select id="game">
-      <option value="LOL">롤</option>
-      <option value="VAL">발로</option>
-      <option value="PUBG">배그</option>
-    </select>
-
-    <select id="year">
-      <option value="2024">2024</option>
-      <option value="2025">2025</option>
-      <option value="2026">2026</option>
-    </select>
-
-    <input type="date" id="date">
-    <input type="text" id="type" placeholder="내전 종류">
-    <input type="text" id="img" placeholder="이미지 URL">
-    <input type="text" id="kda" placeholder="K/D/A">
-    <input type="text" id="result" placeholder="W/L/W">
-
-    <button onclick="addMatch()">추가</button>
-  </div>
+  <div id="PUBG-2024" class="grid"></div>
+  <div id="PUBG-2025" class="grid hidden"></div>
+  <div id="PUBG-2026" class="grid hidden"></div>
 </section>
 
 <script src="script.js"></script>
