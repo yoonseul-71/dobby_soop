@@ -18,10 +18,17 @@
   </nav>
 </header>
 
-<!-- 롤 -->
-<section id="LOL" class="page">
-  <h2>롤</h2>
+<h2>전적</h2>
 
+<!-- 게임 탭 -->
+<div class="buttons">
+  <button onclick="showGame('LOL')">롤</button>
+  <button onclick="showGame('VAL')">발로란트</button>
+  <button onclick="showGame('PUBG')">배틀그라운드</button>
+</div>
+
+<!-- 롤 -->
+<div id="LOL" class="game">
   <div class="buttons">
     <button onclick="showYear('LOL','2024')">2024</button>
     <button onclick="showYear('LOL','2025')">2025</button>
@@ -31,12 +38,10 @@
   <div id="LOL-2024" class="grid"></div>
   <div id="LOL-2025" class="grid hidden"></div>
   <div id="LOL-2026" class="grid hidden"></div>
-</section>
+</div>
 
 <!-- 발로 -->
-<section id="VAL" class="page hidden">
-  <h2>발로란트</h2>
-
+<div id="VAL" class="game hidden">
   <div class="buttons">
     <button onclick="showYear('VAL','2024')">2024</button>
     <button onclick="showYear('VAL','2025')">2025</button>
@@ -46,12 +51,10 @@
   <div id="VAL-2024" class="grid"></div>
   <div id="VAL-2025" class="grid hidden"></div>
   <div id="VAL-2026" class="grid hidden"></div>
-</section>
+</div>
 
 <!-- 배그 -->
-<section id="PUBG" class="page hidden">
-  <h2>배틀그라운드</h2>
-
+<div id="PUBG" class="game hidden">
   <div class="buttons">
     <button onclick="showYear('PUBG','2024')">2024</button>
     <button onclick="showYear('PUBG','2025')">2025</button>
@@ -61,6 +64,7 @@
   <div id="PUBG-2024" class="grid"></div>
   <div id="PUBG-2025" class="grid hidden"></div>
   <div id="PUBG-2026" class="grid hidden"></div>
+</div>
 </section>
 
 <script src="script.js"></script>
