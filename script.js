@@ -1,50 +1,63 @@
-function showGame(game) {
+// 페이지 전환
+function showPage(page) {
   document.querySelectorAll('.page').forEach(p => p.classList.add('hidden'));
-  document.getElementById(game).classList.remove('hidden');
+  document.getElementById(page).classList.remove('hidden');
 }
 
+// 년도 전환
 function showYear(game, year) {
-  document.querySelectorAll(`#${game} .year`).forEach(y => y.classList.add('hidden'));
+  document.querySelectorAll(`#${game} .grid`).forEach(g => g.classList.add('hidden'));
   document.getElementById(`${game}-${year}`).classList.remove('hidden');
 }
 
-// 데이터 저장
-let data = JSON.parse(localStorage.getItem("matchData")) || [];
+/* 🔥 여기만 수정하면 전적 추가됨 */
+const data = [
+  {
+    game: "LOL",
+    year: "2024",
+    date: "2024-03-21",
+    type: "내전",
+    img: "https://via.placeholder.com/200",
+    kda: "10/2/5",
+    result: "W"
+  },
+  {
+    game: "PUBG",
+    year: "2025",
+    date: "2025-01-10",
+    type: "스크림",
+    img: "https://via.placeholder.com/200",
+    kda: "5킬",
+    result: "L"
+  }
+];
 
-function addMatch() {
-  const match = {
-    game: document.getElementById("game").value,
-    year: document.getElementById("year").value,
-    date: document.getElementById("date").value,
-    type: document.getElementById("type").value,
-    img: document.getElementById("img").value,
-    kda: document.getElementById("kda").value,
-    result: document.getElementById("result").value
-  };
-
-  data.push(match);
-  localStorage.setItem("matchData", JSON.stringify(data));
-  render();
-}
-
+// 출력
 function render() {
-  document.querySelectorAll('.year').forEach(y => y.innerHTML = "");
+  document.querySelectorAll('.grid').forEach(g => g.innerHTML = "");
 
   data.forEach(m => {
-    const container = document.getElementById(`${m.game}-${m.year}`);
+    const box = document.getElementById(`${m.game}-${m.year}`);
+
+    const resultStyled =
+      m.result === "W"
+        ? "<span class='win'>WIN</span>"
+        : "<span class='lose'>LOSE</span>";
 
     const div = document.createElement("div");
-    div.className = "buttons"; // 기존 스타일 재사용
+    div.className = "card";
 
     div.innerHTML = `
-      <img src="${m.img}" style="width:60px"><br>
-      <b>${m.date}</b><br>
-      ${m.type}<br>
-      ${m.kda}<br>
-      ${m.result}
+      <img src="${m.img}">
+      <div>
+        <b>${m.date}</b><br>
+        ${m.type}<br>
+        ${m.kda}<br>
+        ${resultStyled}
+      </div>
     `;
 
-    container.appendChild(div);
+    box.appendChild(div);
   });
 }
 
