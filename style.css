@@ -1,76 +1,48 @@
 body {
   margin: 0;
-  font-family: 'Arial', sans-serif;
-  background: white;
-  color: black;
+  font-family: Arial;
+  background: #ddd;
 }
 
-/* 헤더 */
 header {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 15px 30px;
+  padding: 20px;
   border-bottom: 2px solid red;
-}
-
-/* 로고 */
-.logo {
-  font-size: 28px;
-  font-weight: bold;
-  color: black;
-}
-
-/* 메뉴 (오른쪽 정렬) */
-nav {
-  display: flex;
-  gap: 10px;
+  background: #fff;
 }
 
 nav button {
-  background: white;
+  background: none;
   border: none;
   color: red;
-  font-size: 20px;
+  margin-left: 15px;
   cursor: pointer;
-  position: relative;
 }
 
-/* 밑줄 애니메이션 */
-nav button::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  background: red;
-  left: 0;
-  bottom: -5px;
-  transition: 0.3s;
-}
-
-nav button:hover::after {
-  width: 100%;
-}
-
-/* 페이지 */
 .page {
   padding: 20px;
-  animation: fadeIn 0.5s ease;
 }
 
+/* 왼쪽 상단 제목 */
+.page-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+/* 숨김 */
 .hidden {
   display: none;
 }
 
 /* 버튼 */
 .buttons button {
-  margin: 10px;
-  padding: 12px 20px;
+  border: 1px solid red;
   background: white;
-  border: 2px solid red;
   color: red;
+  padding: 5px 10px;
+  margin: 5px;
   cursor: pointer;
-  transition: 0.3s;
 }
 
 .buttons button:hover {
@@ -78,30 +50,14 @@ nav button:hover::after {
   color: white;
 }
 
-/* iframe */
-iframe {
-  width: 100%;
-  height: 80vh;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  margin-top: 10px;
+/* 갤러리 */
+.grid {
+  margin-top: 20px;
 }
 
-/* 애니메이션 */
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-    transform: translateY(10px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
 /* 날짜 묶음 */
 .date-group {
   margin-top: 25px;
-  animation: fadeUp 0.5s ease;
 }
 
 .date-title {
@@ -111,42 +67,34 @@ iframe {
   padding-left: 8px;
 }
 
-/* 가로 갤러리 */
+/* 가로 정렬 */
 .row {
   display: flex;
-  gap: 12px;
+  gap: 10px;
   flex-wrap: wrap;
 }
 
 /* 카드 */
 .card {
-  width: 150px;
+  width: 140px;
   border: 1px solid #eee;
   border-top: 3px solid red;
   padding: 8px;
-  transition: 0.3s;
   background: #fff;
-  animation: fadeUp 0.4s ease;
+  transition: 0.2s;
 }
 
 .card:hover {
-  transform: translateY(-6px) scale(1.03);
-  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  transform: translateY(-3px);
 }
 
 .card img {
   width: 100%;
-  height: 90px;
+  height: 80px;
   object-fit: cover;
 }
 
 .card .info {
   font-size: 12px;
   margin-top: 5px;
-}
-
-/* 애니메이션 */
-@keyframes fadeUp {
-  from {opacity:0; transform: translateY(15px);}
-  to {opacity:1; transform: translateY(0);}
 }
