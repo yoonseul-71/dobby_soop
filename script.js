@@ -1,5 +1,5 @@
 function showGame(game) {
-  document.querySelectorAll('.game').forEach(g => g.classList.add('hidden'));
+  document.querySelectorAll('.page').forEach(p => p.classList.add('hidden'));
   document.getElementById(game).classList.remove('hidden');
 }
 
@@ -8,6 +8,7 @@ function showYear(game, year) {
   document.getElementById(`${game}-${year}`).classList.remove('hidden');
 }
 
+// 데이터 저장
 let data = JSON.parse(localStorage.getItem("matchData")) || [];
 
 function addMatch() {
@@ -30,22 +31,20 @@ function render() {
   document.querySelectorAll('.year').forEach(y => y.innerHTML = "");
 
   data.forEach(m => {
-    const box = document.getElementById(`${m.game}-${m.year}`);
+    const container = document.getElementById(`${m.game}-${m.year}`);
 
-    const el = document.createElement("div");
-    el.className = "match";
+    const div = document.createElement("div");
+    div.className = "buttons"; // 기존 스타일 재사용
 
-    el.innerHTML = `
-      <img src="${m.img}" width="60">
-      <div>
-        <b>${m.date}</b><br>
-        ${m.type}<br>
-        ${m.kda}<br>
-        ${m.result}
-      </div>
+    div.innerHTML = `
+      <img src="${m.img}" style="width:60px"><br>
+      <b>${m.date}</b><br>
+      ${m.type}<br>
+      ${m.kda}<br>
+      ${m.result}
     `;
 
-    box.appendChild(el);
+    container.appendChild(div);
   });
 }
 
