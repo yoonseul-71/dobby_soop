@@ -18,7 +18,7 @@
 </header>
 
 <!-- 롤 -->
-<section id="LOL" class="game">
+<section id="LOL" class="page">
   <h2>롤</h2>
 
   <div class="year-buttons">
@@ -33,7 +33,7 @@
 </section>
 
 <!-- 발로 -->
-<section id="VAL" class="game hidden">
+<section id="VAL" class="page hidden">
   <h2>발로란트</h2>
 
   <div class="year-buttons">
@@ -48,7 +48,7 @@
 </section>
 
 <!-- 배그 -->
-<section id="PUBG" class="game hidden">
+<section id="PUBG" class="page hidden">
   <h2>배틀그라운드</h2>
 
   <div class="year-buttons">
@@ -62,29 +62,31 @@
   <div id="PUBG-2026" class="year hidden"></div>
 </section>
 
-<!-- 입력 -->
-<section class="input-box">
+<!-- 전적 입력 -->
+<section class="page">
   <h2>전적 입력</h2>
 
-  <select id="game">
-    <option value="LOL">롤</option>
-    <option value="VAL">발로</option>
-    <option value="PUBG">배그</option>
-  </select>
+  <div class="buttons">
+    <select id="game">
+      <option value="LOL">롤</option>
+      <option value="VAL">발로</option>
+      <option value="PUBG">배그</option>
+    </select>
 
-  <select id="year">
-    <option value="2024">2024</option>
-    <option value="2025">2025</option>
-    <option value="2026">2026</option>
-  </select>
+    <select id="year">
+      <option value="2024">2024</option>
+      <option value="2025">2025</option>
+      <option value="2026">2026</option>
+    </select>
 
-  <input type="date" id="date">
-  <input type="text" id="type" placeholder="내전 종류">
-  <input type="text" id="img" placeholder="이미지 URL">
-  <input type="text" id="kda" placeholder="K/D/A">
-  <input type="text" id="result" placeholder="W/L/W">
+    <input type="date" id="date">
+    <input type="text" id="type" placeholder="내전 종류">
+    <input type="text" id="img" placeholder="이미지 URL">
+    <input type="text" id="kda" placeholder="K/D/A">
+    <input type="text" id="result" placeholder="W/L/W">
 
-  <button onclick="addMatch()">추가</button>
+    <button onclick="addMatch()">추가</button>
+  </div>
 </section>
 
 <script src="script.js"></script>
