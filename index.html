@@ -8,9 +8,8 @@
 <body>
 
 <header>
-  <div class="logo">DOHYEON RESULT</div>
+  <h1 class="logo">DOHYEON RESULT</h1>
 
-  <!-- 🔴 이건 그대로 유지 -->
   <nav>
     <button onclick="showPage('LOL')">롤</button>
     <button onclick="showPage('VAL')">발로란트</button>
@@ -18,53 +17,37 @@
   </nav>
 </header>
 
-<h2>전적</h2>
-
-<!-- 게임 탭 -->
-<div class="buttons">
-  <button onclick="showGame('LOL')">롤</button>
-  <button onclick="showGame('VAL')">발로란트</button>
-  <button onclick="showGame('PUBG')">배틀그라운드</button>
-</div>
-
 <!-- 롤 -->
-<div id="LOL" class="game">
+<section id="LOL" class="page">
+  <h2>롤</h2>
+
+ <iframe 
+  src="https://spangle-slope-af9.notion.site/ebd/237f94d7dc8680e3ac2cdb67d3997e05" 
+  width="100%" 
+  height="800" 
+  frameborder="0" 
+  allowfullscreen>
+</iframe>
+
+<!-- 발로란트 -->
+<section id="VAL" class="page hidden">
+  <h2>발로란트</h2>
+
   <div class="buttons">
-    <button onclick="showYear('LOL','2024')">2024</button>
-    <button onclick="showYear('LOL','2025')">2025</button>
-    <button onclick="showYear('LOL','2026')">2026</button>
+    <button onclick="go('https://docs.google.com/spreadsheets/d/1FGBG2yQ6UcgjuUvba4awww66tb4rfvpDrOBFHXTpdYg/edit?gid=355285572#gid=355285572')">배그</button>
+    <button onclick="go('https://docs.google.com/spreadsheets/d/1MOQ7hFSZn_dVZVMJKXqb6DsalyKeim_yQJFsw6drpsk/edit?gid=1955586697#gid=1955586697')">발로</button>
+    <button onclick="go('https://docs.google.com/spreadsheets/d/1FJ9WoVqjcoA5hOtgzy1veyZocsXNENvquiChF9qaaVg/edit?gid=464332054#gid=464332054')">롤</button>
   </div>
+</section>
 
-  <div id="LOL-2024" class="grid"></div>
-  <div id="LOL-2025" class="grid hidden"></div>
-  <div id="LOL-2026" class="grid hidden"></div>
-</div>
+<!-- 배틀그라운드 -->
+<section id="PUBG" class="page hidden">
+  <h2>배틀그라운드</h2>
 
-<!-- 발로 -->
-<div id="VAL" class="game hidden">
   <div class="buttons">
-    <button onclick="showYear('VAL','2024')">2024</button>
-    <button onclick="showYear('VAL','2025')">2025</button>
-    <button onclick="showYear('VAL','2026')">2026</button>
+    <button onclick="go('시트1')">시트1</button>
+    <button onclick="go('노션')">노션</button>
   </div>
-
-  <div id="VAL-2024" class="grid"></div>
-  <div id="VAL-2025" class="grid hidden"></div>
-  <div id="VAL-2026" class="grid hidden"></div>
-</div>
-
-<!-- 배그 -->
-<div id="PUBG" class="game hidden">
-  <div class="buttons">
-    <button onclick="showYear('PUBG','2024')">2024</button>
-    <button onclick="showYear('PUBG','2025')">2025</button>
-    <button onclick="showYear('PUBG','2026')">2026</button>
-  </div>
-
-  <div id="PUBG-2024" class="grid"></div>
-  <div id="PUBG-2025" class="grid hidden"></div>
-  <div id="PUBG-2026" class="grid hidden"></div>
-</div>
 </section>
 
 <script src="script.js"></script>
