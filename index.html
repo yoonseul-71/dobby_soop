@@ -22,9 +22,9 @@
   <h2>롤</h2>
 
   <div class="year-buttons">
-    <button onclick="showYear('LOL', '2024')">2024</button>
-    <button onclick="showYear('LOL', '2025')">2025</button>
-    <button onclick="showYear('LOL', '2026')">2026</button>
+    <button onclick="showYear('LOL','2024')">2024</button>
+    <button onclick="showYear('LOL','2025')">2025</button>
+    <button onclick="showYear('LOL','2026')">2026</button>
   </div>
 
   <div id="LOL-2024" class="year"></div>
@@ -37,9 +37,9 @@
   <h2>발로란트</h2>
 
   <div class="year-buttons">
-    <button onclick="showYear('VAL', '2024')">2024</button>
-    <button onclick="showYear('VAL', '2025')">2025</button>
-    <button onclick="showYear('VAL', '2026')">2026</button>
+    <button onclick="showYear('VAL','2024')">2024</button>
+    <button onclick="showYear('VAL','2025')">2025</button>
+    <button onclick="showYear('VAL','2026')">2026</button>
   </div>
 
   <div id="VAL-2024" class="year"></div>
@@ -52,9 +52,9 @@
   <h2>배틀그라운드</h2>
 
   <div class="year-buttons">
-    <button onclick="showYear('PUBG', '2024')">2024</button>
-    <button onclick="showYear('PUBG', '2025')">2025</button>
-    <button onclick="showYear('PUBG', '2026')">2026</button>
+    <button onclick="showYear('PUBG','2024')">2024</button>
+    <button onclick="showYear('PUBG','2025')">2025</button>
+    <button onclick="showYear('PUBG','2026')">2026</button>
   </div>
 
   <div id="PUBG-2024" class="year"></div>
@@ -62,7 +62,7 @@
   <div id="PUBG-2026" class="year hidden"></div>
 </section>
 
-<!-- 전적 입력 -->
+<!-- 입력 -->
 <section class="input-box">
   <h2>전적 입력</h2>
 
@@ -80,10 +80,9 @@
 
   <input type="date" id="date">
   <input type="text" id="type" placeholder="내전 종류">
-
-  <input type="text" id="img" placeholder="캐릭터 이미지 URL">
-  <input type="text" id="kda" placeholder="K/D/A (예: 10/2/5)">
-  <input type="text" id="result" placeholder="세트 결과 (예: W / L / W)">
+  <input type="text" id="img" placeholder="이미지 URL">
+  <input type="text" id="kda" placeholder="K/D/A">
+  <input type="text" id="result" placeholder="W/L/W">
 
   <button onclick="addMatch()">추가</button>
 </section>
