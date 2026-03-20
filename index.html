@@ -21,26 +21,48 @@
 <section id="LOL" class="page">
   <h2>롤</h2>
 
+  <!-- 🔴 여기부터 추가 -->
+  <div class="buttons">
+    <button onclick="showYear('LOL','2024')">2024</button>
+    <button onclick="showYear('LOL','2025')">2025</button>
+    <button onclick="showYear('LOL','2026')">2026</button>
+  </div>
+
+  <div id="LOL-2024" class="grid"></div>
+  <div id="LOL-2025" class="grid hidden"></div>
+  <div id="LOL-2026" class="grid hidden"></div>
+</section>
 
 <!-- 발로란트 -->
 <section id="VAL" class="page hidden">
   <h2>발로란트</h2>
 
+  <!-- 🔴 동일하게 추가 -->
   <div class="buttons">
-    <button onclick="go('https://docs.google.com/spreadsheets/d/1FGBG2yQ6UcgjuUvba4awww66tb4rfvpDrOBFHXTpdYg/edit?gid=355285572#gid=355285572')">배그</button>
-    <button onclick="go('https://docs.google.com/spreadsheets/d/1MOQ7hFSZn_dVZVMJKXqb6DsalyKeim_yQJFsw6drpsk/edit?gid=1955586697#gid=1955586697')">발로</button>
-    <button onclick="go('https://docs.google.com/spreadsheets/d/1FJ9WoVqjcoA5hOtgzy1veyZocsXNENvquiChF9qaaVg/edit?gid=464332054#gid=464332054')">롤</button>
+    <button onclick="showYear('VAL','2024')">2024</button>
+    <button onclick="showYear('VAL','2025')">2025</button>
+    <button onclick="showYear('VAL','2026')">2026</button>
   </div>
+
+  <div id="VAL-2024" class="grid"></div>
+  <div id="VAL-2025" class="grid hidden"></div>
+  <div id="VAL-2026" class="grid hidden"></div>
 </section>
 
 <!-- 배틀그라운드 -->
 <section id="PUBG" class="page hidden">
   <h2>배틀그라운드</h2>
 
+  <!-- 🔴 동일 -->
   <div class="buttons">
-    <button onclick="go('시트1')">시트1</button>
-    <button onclick="go('노션')">노션</button>
+    <button onclick="showYear('PUBG','2024')">2024</button>
+    <button onclick="showYear('PUBG','2025')">2025</button>
+    <button onclick="showYear('PUBG','2026')">2026</button>
   </div>
+
+  <div id="PUBG-2024" class="grid"></div>
+  <div id="PUBG-2025" class="grid hidden"></div>
+  <div id="PUBG-2026" class="grid hidden"></div>
 </section>
 
 <script src="script.js"></script>
