@@ -62,3 +62,50 @@ function render() {
 }
 
 render();
+function showGame(game) {
+  document.querySelectorAll('.game').forEach(g => g.classList.add('hidden'));
+  document.getElementById(game).classList.remove('hidden');
+}
+
+function showYear(game, year) {
+  document.querySelectorAll(`#${game} .grid`).forEach(el => el.classList.add('hidden'));
+  document.getElementById(`${game}-${year}`).classList.remove('hidden');
+}
+
+/* 전적 데이터 */
+const data = [
+  {
+    game: "LOL",
+    year: "2024",
+    date: "2024-03-21",
+    type: "내전",
+    img: "https://via.placeholder.com/150",
+    kda: "10/2/5",
+    result: "W"
+  }
+];
+
+/* 출력 */
+function renderStats() {
+  document.querySelectorAll('.grid').forEach(g => g.innerHTML = "");
+
+  data.forEach(m => {
+    const box = document.getElementById(`${m.game}-${m.year}`);
+    if (!box) return;
+
+    const div = document.createElement("div");
+    div.style.marginBottom = "10px";
+
+    div.innerHTML = `
+      <img src="${m.img}" style="width:80px"><br>
+      ${m.date}<br>
+      ${m.type}<br>
+      ${m.kda}<br>
+      ${m.result}
+    `;
+
+    box.appendChild(div);
+  });
+}
+
+renderStats();
